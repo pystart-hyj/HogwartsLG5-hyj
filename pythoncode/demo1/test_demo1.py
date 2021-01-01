@@ -5,9 +5,6 @@ import pytest
 # def connectDB():
 #     print("test_demo1 下的connectDB")
 
-def test_a(connectDB):
+def test_a(get_calc):
     print("sub_demo  test_a")
 
-class TestB:
-    def test_b(connectDB):
-        print("sub_demo  test_b")
