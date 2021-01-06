@@ -1,2 +1,6 @@
 /venv/
 /.idea/
+/homework_pytest/allure-report/
+/homework_pytest/result/
+/test_pytest/test_allure/result/
+/test_python/python_study/b/
