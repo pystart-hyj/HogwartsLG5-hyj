@@ -54,6 +54,7 @@ class TestAddContacts:
         self.driver.find_element(MobileBy.XPATH,"//*[@text='设置部门']").click()
         self.driver.find_element(MobileBy.XPATH,"//*[contains(@text,'确定')]").click()
         self.driver.find_element(MobileBy.XPATH,"//*[@text='保存']").click()
+        # 定位页面有安卓的Toast弹框
         ele = self.driver.find_element(MobileBy.XPATH,"//*[@class='android.widget.Toast']").text
         assert ele == "添加成功"
         sleep(5)
