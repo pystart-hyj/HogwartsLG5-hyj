@@ -5,5 +5,5 @@ from homework_appium_framework.page.search_page import SearchPage
 
 class MarketPage(BasePage):
     def click_search(self):
-        self.find((MobileBy.XPATH, "//*[@resource-id='com.xueqiu.android:id/action_search']")).click()
+        self.run_steps("../page/market_page.yaml","click_search")
         return SearchPage(self.driver)

@@ -1,9 +1,11 @@
+import yaml
 from selenium.webdriver.common.by import By
 
 
 def handle_black(fun):
     def run(*args, **kwargs):
-        black_list = [(By.ID, "iv_close")]
+        with open("../config/black_list.yaml") as f:
+            black_list = yaml.safe_load(f)
         # instance 是指传入的self，BasePage中的find方法传入两个参数（self, locator），args[0]表示取第一个参数
         instance = args[0]
         try:

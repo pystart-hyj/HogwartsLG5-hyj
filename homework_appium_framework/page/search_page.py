@@ -3,8 +3,8 @@ from homework_appium_framework.config.basepage import BasePage
 
 
 class SearchPage(BasePage):
-    def input_search(self, text):
-        self.find((MobileBy.XPATH, "//*[@resource-id='com.xueqiu.android:id/search_input_text']")).send_keys(text)
+    def input_search(self):
+        self.run_steps("../page/search_page.yaml","input_search")
         return self
 
     def get_list_text(self):

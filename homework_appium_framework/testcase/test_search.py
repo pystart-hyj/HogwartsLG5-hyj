@@ -12,10 +12,9 @@ class TestSearch:
     def teardowd(self):
         self.app.stop()
 
-    with open("../data/search.yaml", encoding="UTF-8") as f:
-        search_datas = yaml.safe_load(f)
+    # with open("../data/search.yaml", encoding="UTF-8") as f:
+    #     search_datas = yaml.safe_load(f)
 
-    @pytest.mark.parametrize("text", search_datas)
-    def test_search(self, text):
-        result = self.main.goto_market().click_search().input_search(text).get_list_text()
+    def test_search(self):
+        result = self.main.goto_market().click_search().input_search().get_list_text()
         assert result > 0
