@@ -1,0 +1,6 @@
+goto_1:
+  - action: 111
+    locator: [xpath,"//*[@id=xxxx111]"]
+goto_2:
+  - action: 222
+    locator: [xpath,"//*[@id=xxxx222]"]
