@@ -13,6 +13,8 @@ def test_demo():
     url = f"https://qyapi.weixin.qq.com/cgi-bin/user/get?access_token={token}&userid={USERID}"
     r = requests.get(url)
     # print(r.json())
+    r1 = r.json()
+    assert r1.get("name","不存在name字段") == "修改后姓名"
 
     # 更新成员
     url = f"https://qyapi.weixin.qq.com/cgi-bin/user/update?access_token={token}"
